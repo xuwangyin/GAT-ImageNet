@@ -1,4 +1,4 @@
-# Asymmetrical Adversarial Training on Restricted ImageNet
+# Generative Adversarial Training on Restricted ImageNet
 
 ## Train and evaluation
 1. Create the dog-vs-others dataset: `python create_dataset.py [your ImageNet dir]`.
