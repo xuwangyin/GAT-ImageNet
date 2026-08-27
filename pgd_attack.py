@@ -35,7 +35,7 @@ def perturb(model, x, norm, eps, step_size, steps, random_start):
   for i in range(steps):
     x = x.clone().detach().requires_grad_(True)
     logits = forward(model, x)
-    loss = logits.mean()
+    loss = logits.sum()
     grad, = torch.autograd.grad(loss, [x])
     with torch.no_grad():
       x = step.step(x, grad)
